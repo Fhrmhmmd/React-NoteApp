@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F0F0F0;
+  color: white;
+
+}
+
+input, textarea {
+  padding: 12px;
+  margin: 12px 0;
+  font-family: 'Inter', sans-serif;
+  background-color: transparent;
+  color: white;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aaa;
+  font-weight: bold;
+}
+
+.note-app{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.note-app h1 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  padding: 20px;
+  color: #20B2AA;
+  font-family: "Poppins", serif;
+}
+
+.note-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.note-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #696969;
+  color: black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.note-item-container{
+  padding: 15px; 
+}
+
+.note-item__title{
+  font-size: 22px;
+  font-weight: bold;
+  font-family: "Poppins", serif;
+  
+}
+
+.note-item__body{
+  line-height: 20px;
+  font-family: "Roboto", serif;
+}
+
+.note-item__created-at{
+  padding-bottom: 15px;
+  color: #696969;
+  font-size: 14px;
+}
+
+
+.note-item__btn {
+  display: block;
+  width: 100%;
+  background-color: #F5F5F5;
+  border: 0;
+  border-top: 1px solid #aaa;
+  padding: 8px 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  color: #ff5f52;
+  cursor: pointer;
+  text-align: center;
+  font-size: 15px;
+}
+
+
+.note-item__archive-button {
+  color: #fff263;
+}
+
+.note-item__archive-button:hover {
+  color: #c49000;
+}
+
+.note-item__btn:hover {
+  color: #b00020;
+}
+
+@media only screen and (min-width: 500px) {
+  .notes-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .note-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .note-app{
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .note-search input {
+    min-width: 400px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .notes-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
